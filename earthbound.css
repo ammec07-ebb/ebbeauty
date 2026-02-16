@@ -1,0 +1,310 @@
+ * { box-sizing: border-box; }
+ 
+
+  body {
+     font-family: Arial, sans-serif;
+     background-image: url(images/bg.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-color: lemonchiffon;
+     padding: 40px 20px;
+  }
+    /* center page on screen*/
+
+
+/*===== HEADER =====*/
+
+
+  header {
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 50px 20px 30px 20px;
+  }
+
+
+  h1 {
+    color: white;
+    text-shadow: 2px 2px 6px #000;
+  }
+
+
+/* ===== NAVIGATION ===== */
+
+
+  nav {
+    font-size: 16px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+  nav ul {
+    flex-direction: row; /* links are side-by-side */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;               /* replaces<br> spacing */
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 10px auto 0 auto;
+}
+
+
+  span {
+    color: #009966;
+}
+  
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+
+  nav li {
+    display: inline;
+  }
+
+
+  nav a {
+    text-decoration: none;
+    color: #2f6f4e;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+
+  nav a:hover {
+    text-decoration: underline;
+    background-color: #fdf8e4;
+    border-radius: 6px;
+}
+
+
+/* ===== CONTENT CONTAINER ===== */
+
+
+  section {
+    margin-top: 40px 0;
+}
+
+
+/* ===== TEXT STYLES ===== */
+
+
+  p {
+    font-size: 18px;
+    color: sienna;
+    line-height: 1.7;
+}
+
+
+  h2 {
+    color: #2f6f4e;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+  h3 {
+    color: #2f6f4e;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* ===== IMAGES ===== */
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+
+/* ===== HORIZONTAL LINE ===== */
+
+
+  hr {
+    width: 60%;
+    border: 10px solid #339966;
+    border-radius: 6px;
+}
+
+
+/* ===== LAYOUT ===== */
+  .layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+  
+
+  .columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+  }
+
+  main {
+    flex: 2;
+  }
+  
+  
+  aside {
+    flex: 1;
+    background-color: #fffaf0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);  
+  }
+  
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  
+  .column {
+    text-align: center;
+  }
+  
+  
+  .column img {
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+
+  address {
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 20px;
+  }
+
+
+  section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+
+/* ===== FOOTER ===== */
+
+
+  footer {
+    text-align: center;
+    color: sienna;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+
+/* ===== ID SELECTORS ===== */
+ 
+
+  #wrapper {
+    max-width: 1000px;
+    background-color: #ffffff;
+    border: 3px solid #339966;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin: auto;
+  }
+
+
+  #products {
+    background-color: #fdf8e4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+
+  #services {
+    background-color: #f4efe6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+
+  #social {
+    background-color: #339966;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+
+
+ /* ===== CLASS SELECTORS ===== */
+
+
+  .important {
+    color: darkred;
+    font-weight: bold;
+  }
+
+
+  .highlight {
+    background-color: #fff3b0;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+ /* ===== LISTS =====*/
+
+ 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
+  li {
+    padding: 5px 0;
+  }
+
+
+ /* ===== SVG STYLES ===== */
+
+
+  .book-box {
+    fill: sienna;
+    stroke: black;
+    stroke-width: 3;
+    opacity: 0.5;
+  }
+
+
+  .book-text {
+    fill: white;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+
+
+  .book-svg {
+    display: block;
+    margin: auto;
+  }

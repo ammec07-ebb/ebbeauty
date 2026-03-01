@@ -112,18 +112,23 @@
   img {
     max-width:100%;
     height:auto;
+    display:block;
+    margin:auto;
   }
 
 
   #figureContainer {
-    text-align:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align items:center;
   }
 
 
   figure {
     display:inline-block;
     width:320px;
-    margin:15px;
+    margin:10px;
     text-align:center;
     padding: 10px;
     border-radius: 8px;
@@ -173,6 +178,19 @@
 
   nav a {
     display:inline;
+  }
+
+  .column {
+    display:block;
+    width:100%;
+    margin:auto;
+    text-align:center;
+  }
+
+  #wrapper {
+    width:100%;
+    padding:10px;
+    text-align:center;
   }
 
   }
@@ -308,8 +326,7 @@
 
 
 /* ===== ID SELECTORS ===== */
- 
-
+  
   #wrapper {
     max-width: 1000px;
     background-color: #ffffff;

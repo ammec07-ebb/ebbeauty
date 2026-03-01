@@ -11,6 +11,7 @@
      background-position: center;
      background-color: lemonchiffon;
      padding: 40px 20px;
+     background-image:url("images/bg.jpg");
   }
     /* center page on screen*/
 
@@ -68,8 +69,10 @@
   nav li {
     display: inline;
     list-style:none;
-    display:inline;
     padding:0 18px;
+    width: 150px;
+    text-align: center;
+    margin: 5px;
   }
 
 
@@ -92,8 +95,55 @@
   }
 
 
+/* ==== Mobile ==== */
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  body {
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+  }
+
+
+  img {
+    max-width:100%;
+    height:auto;
+  }
+
+
+  #figureContainer {
+    text-align:center;
+  }
+
+
+  figure {
+    display:inline-block;
+    width:320px;
+    margin:15px;
+    text-align:center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+
+  figcaption {
+    background-color: rgba(255,255,255,0.85);
+    color: #2f4f3a;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    padding: 8px;
+    margin-top: 6px;
+    border-top: 2px solid #8b9a7a;
+}
+
+
 /* ===== DESKTOP ===== */
-@media only screen and (min-width:640px){
+@media only screen and (min-width:1000px){
 
   nav li{
     display:inline;
@@ -111,6 +161,21 @@
     padding:6px;
   }
 
+  body {
+    max-width:1000px;
+  }
+
+  }
+
+
+/* ==== Tablet ==== */
+@media only screen and (min-width:720px){
+
+  nav a {
+    display:inline;
+  }
+
+  }
 
 /* ===== CONTENT CONTAINER ===== */
 

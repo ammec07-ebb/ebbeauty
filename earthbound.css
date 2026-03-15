@@ -1,3 +1,4 @@
+/* ===== GLOBAL ===== */
  * { box-sizing: border-box; }
  
 
@@ -12,6 +13,8 @@
      background-color: lemonchiffon;
      padding: 40px 20px;
      background-image:url("images/bg.jpg");
+     max-width:1000px;
+     margin:auto;
   }
     /* center page on screen*/
 
@@ -45,13 +48,13 @@
     gap: 20px;
     width:100%;
     text-align:center;
+    font-weight:bold;
 }
 
 
   nav ul {
     flex-direction: row; /* links are side-by-side */
     justify-content: center;
-    align-items: center;
     gap: 20px;               /* replaces<br> spacing */
     flex-wrap: wrap;
     padding: 0;
@@ -67,7 +70,7 @@
 
 
   nav li {
-    display: inline;
+    display:inline-block;
     list-style:none;
     padding:0 18px;
     width: 150px;
@@ -80,7 +83,7 @@
     text-decoration: none;
     color: #DEB887;
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 8px 12px;
     transition: 0.3s;
     display:block;
     width:30%;
@@ -314,6 +317,16 @@
   }
 
 
+  blockquote {
+    text-align:justify;
+  }
+
+
+  blockquote:first-letter {
+    font-size:2em;
+    font-weight:bold;
+  }
+
 /* ===== FOOTER ===== */
 
 
@@ -330,8 +343,8 @@
   #wrapper {
     max-width: 1000px;
     background-color: #ffffff;
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     margin: auto;
   }
@@ -377,6 +390,52 @@
     padding: 5px;
     border-radius: 5px;
   }
+
+
+  .box {
+    border:2px solid green;
+    padding:15px;
+    margin:20px 0;
+    box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+  }
+
+
+  .selected {
+    color:white;
+    background-color:#4b6b4b;
+    padding:8px 12px;
+    border-radius:6px;
+  }
+
+  
+  .infobar {
+    background-color:#333;
+    color:white;
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+    margin:20px 0;
+  }
+
+
+  .custom-bullets {
+    list-style-image:url(images/leaf.png);
+    margin-left: 40px;
+  }
+
+
+  .byline {
+    text-align:center;
+    font-style:italic;
+    color:#555;
+  }
+
+  .newsline {
+    width:80%;
+    border:4px solid #4b6b4b;
+    border-radius:6px;
+  }
+
 
  /* ===== LISTS =====*/
 

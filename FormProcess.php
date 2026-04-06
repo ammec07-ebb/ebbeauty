@@ -1,6 +1,6 @@
 <?php
 
-$email_to = "youremail@email.com"; 
+$email_to = "ammec07@gmail.com"; 
 $email_subject = "Earth Bound Beauty Contact Form";
 
 $FirstName = $_POST['FirstName'];

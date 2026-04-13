@@ -78,6 +78,13 @@
 </footer>
 
 </div> <!-- close wrapper -->
-
+<script>
+var update = new Date(document.lastModified);
+var month = update.getMonth() + 1;
+var date = update.getDate();
+var year = update.getFullYear();
+document.write("<p style='font-size: 12px; text-align:center;'>Last Updated: " 
++ month + "/" + date + "/" + year + "</p>");
+</script>
 </body>
 </html>

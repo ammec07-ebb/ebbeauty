@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>Earth Bound Beauty JavaScript</title>
+ <meta name="author" content="Amme Cook">
+ <meta name="description" content="The Earth Bound Beauty JavaScript . ">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="earthbound.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: lemonchiffon;
+display: flex;
+justify-content: center;
+}
+
+#wrapper {
+width: 90%;
+max-width: 900px;
+}
+
+header {
+background-color: #6b8e7a;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+nav {
+background-color: #333;
+padding: 10px;
+text-align: center;
+}
+
+nav a {
+color: white;
+padding: 10px 15px;
+text-decoration: none;
+}
+
+nav a:hover {
+background-color: #6b8e7a;
+}
+
+main {
+padding: 30px;
+}
+
+section {
+margin-bottom: 40px;
+padding: 20px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+button {
+padding: 10px 20px;
+background-color: #6b8e7a;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+font-size: 12px;
+}
+
+img {
+max-width: 100%;
+}
+
+button {
+padding: 8px 15px;
+margin: 5px;
+background-color: #6b8e7a;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+</style>
+
+<script>
+// #3 Prompt
+function askName() {
+var name = prompt("What is your name?");
+document.getElementById("welcome").innerHTML = "Welcome to Earth Bound Beauty, " + name + "!";
+}
+
+// #5 Calculation
+function calculateTotal() {
+
+var color = document.getElementById("color").value;
+var other = document.getElementById("other").value;
+
+color = Number(color);
+other = Number(other);
+
+var total = color + other;
+
+document.getElementById("total").innerHTML = 
+"Estimated Total: $" + total;
+
+}
+
+// #6 Internal Image Rotation
+var images = [
+"images/portfolio4.jpg",
+"images/portfolio5.jpg",
+"images/portfolio6.jpg"
+];
+
+var index = 0;
+
+function rotateImage() {
+index++;
+if(index >= images.length) {
+index = 0;
+}
+document.getElementById("rotate").src = images[index];
+}
+
+setInterval(rotateImage, 3000);
+
+// #8 Popup Window
+function openPopup() {
+window.open("","popup","width=400,height=300").document.write("<h2>Earth Bound Beauty</h2><p>Congratulations!! You won 20% off any Pureology or Olaplex product! Use code --EBB20OFF-- for your next visit at participating salons!</p>");
+}
+</script>
+
+<header>
+<h1>Earth Bound Beauty</h1>
+<p>JavaScript Interactive Page</p>
+</header>
+
+<nav>
+<a href="index.htm">Home</a>
+<a href="portfolio.htm">Portfolio</a>
+<a href="contact.htm">Contact</a>
+</nav>
+
+<main>
+
+<ol>
+
+<!-- #1 Mouseover Alert -->
+<section>
+<li>
+<h2>About our mission and values</h2>
+<p onmouseover="alert('We offer a range of different services from remy hair extensions to any color service under the sun. We even do waxing! We are a group of passionate individuals looking to clean up the beauty industry. We do this by partnering with Green Circles Salon to recycle salon waste and educate our guests on healthy/cruelty free products.Do you want to join the sustainable beauty train? contact us to learn more.')">Learn about our salon.</p>
+</li>
+</section>
+
+<!-- #2 Alert Button -->
+<section>
+<li>
+<h2>Want a Consultation?</h2>
+<button onclick="alert('We offer free consultations for all new clients! Contact us for more information.')">Click for Info</button>
+</li>
+</section>
+
+<!-- #3 Prompt -->
+<section>
+<li>
+<h2>Welcome! Whats your name?</h2>
+<button onclick="askName()">Enter Your Name</button>
+<p id="welcome"></p>
+</li>
+</section>
+
+<!-- #4 Last Updated -->
+<section>
+<li>
+<h2>Last Updated</h2>
+<script>
+var update = new Date(document.lastModified);
+month=update.getMonth() +1;
+date=update.getDate();
+year=update.getFullYear();
+document.write("Last Updated - " + month + "/" + date + "/" + year);
+</script>
+</li>
+</section>
+
+<!-- #5 Calculation -->
+<section>
+<li>
+<h2>Service Cost Estimate</h2>
+<label>Color Services:</label>
+<select id="color">
+<option value="0">N/A - $0</option>
+<option value="70">Partial - $70</option>
+<option value="90">Full - $90</option>
+<option value="100">Full Color - $100</option>
+<option value="65">Root Touch Up - $65</option>
+</select>
+
+<br><br>
+
+<label>Other:</label>
+<select id="other">
+<option value="0">N/A - $0</option>
+<option value="65">Updo - $65</option>
+<option value="50">Haircut - $50</option>
+<option value="100">Waxing - $25</option>
+</select>
+
+<br><br>
+
+<button onclick="calculateTotal()">Calculate</button>
+
+<p id="total"></p>
+</li>
+</section>
+
+<!-- #6 Internal JavaScript -->
+<section>
+<li>
+<h2>Our work</h2>
+<img id="rotate" src="images/portfolio4.jpg" alt="Hair Style">
+</li>
+</section>
+
+<!-- #7 External JavaScript -->
+<section>
+<li>
+<h2>Products and Partnerships</h2>
+
+<img id="slide" src="images/pureology.jpg" alt="Slideshow" width="300">
+
+<br><br>
+
+<button onclick="prevSlide()">Previous</button>
+<button onclick="nextSlide()">Next</button>
+
+<script src="scripts/slideshow.js"></script>
+
+</li>
+</section>
+
+<!-- #8 Popup -->
+<section>
+<li>
+<h2>Click for product discount code!!</h2>
+<button onclick="openPopup()">Click Here</button>
+</li>
+</section>
+
+</ol>
+
+</main>
+
+<footer>
+<script>
+var update = new Date(document.lastModified);
+document.write("Last Updated: " + update);
+</script>
+<p>© 2026 Amme Cook | (941) 555-5555</p>
+</footer>
+</div>
+</body>
+</html>

@@ -13,8 +13,6 @@
      background-color: lemonchiffon;
      padding: 40px 20px;
      background-image:url("images/bg.jpg");
-     max-width:1000px;
-     margin:auto;
   }
     /* center page on screen*/
 
@@ -346,7 +344,7 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    margin: auto;
+    margin: 0 auto;
   }
 
 
@@ -378,6 +376,10 @@
 
  /* ===== CLASS SELECTORS ===== */
 
+  .gif {
+  width: 200px;
+  height: auto;
+  }
 
   .important {
     color: darkred;
@@ -506,3 +508,106 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
+/* Slideshow */
+
+.slideshow {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: fade 9s infinite;
+  opacity: 0;
+}
+
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 3s; }
+.slideshow img:nth-child(3) { animation-delay: 6s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Stack */
+
+.stack {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  margin-bottom: 40px;
+}
+
+.stack img {
+  position: absolute;
+  width: 60%;   /* slightly smaller so you see layering */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.stack img:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
+
+/* Back */
+.img1 {
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transform: rotate(-10deg);
+}
+
+/* */
+.img2 {
+  left: 50px;
+  top: 20px;
+  z-index: 2;
+  transform: rotate(-5deg);
+}
+
+/* */
+.img3 {
+  left: 100px;
+  top: 40px;
+  z-index: 3;
+  transform: rotate(3deg);
+}
+
+/* FRONT (gcs image) */
+.img4 {
+  left: 150px;   /* ← this is the important part */
+  top: 60px;
+  z-index: 4;
+  transform: rotate(8deg);
+}
+
+/* Media Page */
+k
+.media-page #wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.media-page main {
+  text-align: center;
+}
+
+.slideshow,
+.stack {
+  margin: 20px auto;
+  display: block;
+}
+
+.instagram-media {
+  margin: 20px auto !important;
+  max-width: 540px;
+}
